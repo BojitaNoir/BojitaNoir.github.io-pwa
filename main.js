@@ -1,7 +1,7 @@
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         // Try multiple relative paths so registration works on GitHub Pages subpaths
-        const candidates = ['sw.js', './sw.js', '/sw.js'];
+    const candidates = ['sw.js', './sw.js', '../sw.js', '/sw.js'];
         const tryRegister = (i = 0) => {
             if (i >= candidates.length) return console.log('Service Worker not registered');
             navigator.serviceWorker.register(candidates[i])
